@@ -23,9 +23,9 @@ def run_kmeans(pixels, k):
     center = []
     for i in range(k):
         center.append(np.array([randint(256), randint(256), randint(256)]))
-    print "Initial centers:",
-    print map(lambda x: x.tolist(), center)
-    print "========================"
+    print("Initial centers:",)
+    print(list(map(lambda x: x.tolist(), center)))
+    print("========================")
     distortion = 0.0
 
     # 最大50回のIterationを実施
@@ -53,8 +53,8 @@ def run_kmeans(pixels, k):
         for i in range(k):
             center_new[i] = center_new[i] / num_points[i]
         center = center_new
-        print map(lambda x: x.tolist(), center)
-        print "Distortion: J=%d" % distortion_new
+        print(list(map(lambda x: x.tolist(), center)))
+        print("Distortion: J=%d" % distortion_new)
 
         # Distortion(J)の変化が0.1%未満になったら終了
         if iter_num > 0 and distortion - distortion_new < distortion * 0.001:
@@ -63,16 +63,17 @@ def run_kmeans(pixels, k):
 
     # 画像データの各ピクセルを代表色で置き換え
     for pix, point in enumerate(pixels):
-        pixels[pix] = tuple(center[cls[pix]])
+        pixels[pix] = tuple(map(int, center[cls[pix]]))
+    print(pixels[0])
 
     return pixels
         
 # Main
 if __name__ == '__main__':
     for k in Colors:
-        print ""
-        print "========================"
-        print "Number of clusters: K=%d" % k
+        print("")
+        print("========================")
+        print("Number of clusters: K=%d" % k)
         # 画像ファイルの読み込み
         im = Image.open("photo.jpg")
         pixels = list(im.convert('RGB').getdata())

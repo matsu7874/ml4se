@@ -63,7 +63,5 @@ if __name__ == '__main__':
     subplot.set_title('Unbiased variance')
     draw_subplot(subplot, raw_linex, raw_u2, mean_linex, mean_u2, (-0.5,3.0))
 
-    fig1.show()
-    fig2.show()
-    fig3.show()
+    plt.show()
 

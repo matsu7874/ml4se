@@ -37,7 +37,7 @@ def show_figure(mu, cls):
                 i += 1
                 if i > 6:
                     break
-    fig.show()
+    plt.show()
 
 # ベルヌーイ分布
 def bern(x, mu):
@@ -67,11 +67,11 @@ if __name__ == '__main__':
         subplot.set_xticks([])
         subplot.set_yticks([])
         subplot.imshow(mu[k].reshape(28,28), cmap=plt.cm.gray_r)
-    fig.show()
+    plt.show()
 
     # N回のIterationを実施
     for iter_num in range(N):
-        print "iter_num %d" % iter_num
+        print("iter_num %d" % iter_num)
 
         # E phase
         resp = DataFrame()
@@ -101,7 +101,7 @@ if __name__ == '__main__':
             subplot.set_xticks([])
             subplot.set_yticks([])
             subplot.imshow(mu[k].reshape(28,28), cmap=plt.cm.gray_r)
-        fig.show()
+        plt.show()
 
     # トレーニングセットの文字を分類
     cls = []

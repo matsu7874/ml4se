@@ -127,6 +127,4 @@ if __name__ == '__main__':
             liney = f(linex, ws)
             subplot2.plot(linex, liney, color='red', linestyle='--')
 
-    fig1.show()
-    fig2.show()
-
+    plt.show()

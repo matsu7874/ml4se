@@ -91,4 +91,4 @@ if __name__ == '__main__':
         subplots1 = fig.add_subplot(2,2,c+1)
         subplots2 = fig.add_subplot(2,2,c+2+1)
         run_simulation(variance, subplots1, subplots2)
-    fig.show()
+    plt.show()

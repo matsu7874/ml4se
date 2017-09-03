@@ -100,7 +100,7 @@ if __name__ == '__main__':
         subplot.plot(linex, liney-sigma, color='red', linestyle='--')
         subplot.legend(loc=1)
 
-    fig.show()
+    plt.show()
 
     # 多項式近似に対する最大対数尤度を計算
     df = DataFrame()

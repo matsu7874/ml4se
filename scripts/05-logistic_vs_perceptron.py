@@ -135,4 +135,4 @@ if __name__ == '__main__':
     for c, variance in enumerate(Variances):
         subplot = fig.add_subplot(2,2,c+1)
         run_simulation(variance, subplot)
-    fig.show()
+    plt.show()

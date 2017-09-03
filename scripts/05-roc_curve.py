@@ -56,7 +56,7 @@ def run_simulation(variance, subplot):
     t = t.as_matrix()
 
     # 最大100回のIterationを実施
-    for i in range(100):
+    for i in range(10-0):
         # IRLS法によるパラメータの修正
         y = np.array([])
         for line in phi:
@@ -124,4 +124,4 @@ if __name__ == '__main__':
         result = run_simulation(variance, subplots)
         subplots = fig.add_subplot(2,2,c+2+1)
         draw_roc(result, subplots)
-    fig.show()
+    plt.show()

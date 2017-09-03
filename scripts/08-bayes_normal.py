@@ -72,6 +72,5 @@ if __name__ == '__main__':
         subplot.set_xlim(-5,5)
         subplot.set_ylim(0)
 
-    fig1.show()
-    fig2.show()
+    plt.show()
 
